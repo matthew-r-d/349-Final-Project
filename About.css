@@ -1,0 +1,119 @@
+/* Good practice is to remove any margin or padding given by any web browser using the below code */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(215, 218, 224);
+}
+
+/* menu */
+.menu {
+    /* Use sticky instead of fixed */
+    position: sticky;
+    top:0;
+    border-bottom: 1px solid black;
+    background-color: rgb(215, 218, 224);
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.menu ul{
+    display: flex; /*makes horizontal*/
+    list-style-type: none; 
+    justify-content: center;
+    width: 100%;    /* texts takes up 100% of menu width */
+    padding: 0; /* needed to center text with height: 40px */
+    margin: 0;  /* need for the above reason */
+}
+.menu li{
+    width:100%;
+    text-align: center;
+}
+.menu a{
+    color: black;
+    text-decoration: none;
+}
+
+/* title */
+.title {
+    text-align: center;
+    font-size: 100px;
+    font-weight: bold;
+    color: rgb(93, 100, 135);
+    text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    
+}
+
+/* new better body code */
+.section {
+   /* If you do not define height, it will automatically take the required height */
+    width: 100%;
+    padding: 50px 10px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(209, 218, 232);
+    border-top: 1px solid #333;
+}
+
+.background, .skills, .resume{
+    background-color: rgb(209, 218, 232);
+}
+.education, .interests {
+    background-color: rgb(215, 218, 224);;
+
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* need to align text and image */
+    width: 100%;
+    height: 100%;
+}
+
+.text {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.2em;
+    color: rgb(111, 24, 24);
+    margin: 0 30px;
+}
+
+/* titles */
+.text::before {
+    display: block;
+    font-size: 1em;
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+.background .text::before {content: "BACKGROUND";}
+.education .text::before {content: "EDUCATION";}
+.skills .text::before {content: "SKILLS";}
+.interests .text::before {content: "INTERESTS";}
+.resume .text::before {content: "RESUME"; }
+
+/* images */
+.backgroundImg, .educationImg, .skillsImg, .interestsImg, .resumeImg {
+    width: auto;
+    height: auto;
+    max-width: 500px;
+    object-fit: cover;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* resume link animations */
+.resume .text a {
+    color: blue; /*keeps it blue and doesn't turn to purple */
+    text-shadow: 0 0 5px rgba(0, 0, 255, 0.8); /* this for glowing effect */
+    transition: text-shadow 0.3s ease-in-out; /*cant use 30000 here thats js */
+    text-decoration: none; /*need this so it doesn't start glowing from the beginning */
+}
+.resume .text a:hover { /*makes it underline when hovered over */
+    border-bottom: 2px solid blue; /* to make it blue */
+    text-shadow: 0 0 15px rgba(0, 0, 255, 1); /* makes the glowing more intense when hovered over */
+}

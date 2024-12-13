@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="Contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <!-- menu and title -->
+    <div class="menu">
+        <ul>
+            <li><a href="/homePage.html">Home Page</a></li>
+            <li><a href="/About.html">About Page</a></li>
+            <li><a href="/Projects.html">Projects</a></li>
+            <li><a href="/Skills.html">Skills</a></li>
+            <li><a href="/Contact.html">Contact me</a></li>
+        </ul>
+    </div>
+   
+    <br>
+
+    <div class="title">
+        Contact Page 
+    </div>
+    
+    <h1 class="h1">Thank you for visiting my website! You can send me an email here or check out my social media :-)</h1>
+
+    <div class="flex-container">
+    <!-- form -->
+        <div class="formBox">
+            <form onsubmit="form(event)"> <!--need event here-->
+            <label for="f_name">First Name:</label>
+            <input type="text" id="f_name" name="f_name" >
+            <br><br>
+
+            <label for="l_name">Last Name:</label>
+            <input type="text" id="l_name" name="l_name" >
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" >
+            <br><br>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" cols="30"></textarea> <!--need </textarea> -->
+            <br><br>
+
+            <input type="submit" value="Submit"> <!--submit button-->
+            <p id="error"></p> <!-- this is for error?-->
+            </form>
+        </div>
+    <!-- duck gif -->
+        <div class="gif">
+            <img src="duck.webp" alt="duck" width="480" height="360">
+        </div>
+    </div>
+    <br><br>
+    <!-- end of flex box -->
+
+    <!-- social media -->
+    <h2 class="h2">My Social Media</h2>
+    <div class="social">
+    <!-- had to put styling here, when I tired to edit the styling in the css file, the icons were not working correctly -->
+    <style>
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%; 
+        }
+        
+        /* looks better with hover */
+        .fa:hover { 
+            opacity: 0.7;
+        }
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+        .fa-youtube {
+            background: #bb0000;
+            color: white;
+        }
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+        .fa-github {
+            background: #181717;
+            color:white;
+        }
+    </style>
+<a href="https://www.linkedin.com/in/matthew-dominguez-b48b44248/" class="fa fa-linkedin" target="_blank"></a>
+<a href="https://www.instagram.com/matthewdthew/" class="fa fa-instagram" target="_blank"></a>
+<a href="https://www.youtube.com/channel/UCFcKS52TOQGpPjKdy1av-Fg" class="fa fa-youtube" target="_blank"></a>
+<a href="https://github.com/matthew-r-d" class="fa fa-github" target="_blank"></a>
+</div>
+
+<script src="Contact.js"></script>
+</body>
+</html>

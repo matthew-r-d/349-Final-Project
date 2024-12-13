@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(215, 218, 224);
+}
+
+/* menu */
+.menu {
+    /* Use sticky instead of fixed */
+    position: sticky;
+    top:0;
+    border-bottom: 1px solid black;
+    background-color: rgb(215, 218, 224);
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.menu ul{
+    display: flex; /*makes horizontal*/
+    list-style-type: none; /*removes bullet points*/
+    justify-content: center;
+    width: 100%;   
+    padding: 0; /* needed to center text with height: 40px */
+    margin: 0;  /* need for the above reason */
+}
+.menu li{
+    width:100%;
+    text-align: center;
+}
+.menu a{
+    color: black;
+    text-decoration: none;
+}
+
+/* title */
+.title {
+    text-align: center;
+    font-size: 100px;
+    font-weight: bold;
+    color: rgb(93, 100, 135);
+    text-shadow: /*easier to read like this */
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    
+}
+
+/* flexbox stuff */
+.flex-container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.formBox{
+    display: flex;
+    align-items: center;
+    width: 300px;  
+    height: 400px;
+    padding: 20px;
+    margin: 20px; /* Spacing from top and left */
+    background-color: rgb(209, 218, 232);
+    border-radius: 10px; /* Rounded corners */
+    border: 3px solid #333;
+    margin-left: 50px; /*give some space */
+}
+.formBox label {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.2em;
+    color: rgb(111, 24, 24);
+}
+.formBox input, .formBox textarea {
+    width: 90%;  /* uniforms everything */
+    padding: 5px; /*just looks better with this */
+    background-color: rgb(232, 225, 211)
+   
+}
+.gif {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 70px;
+}
+/* end of flex box  */
+
+
+/* Social media box*/
+.social{
+    background-color: rgb(209, 218, 232); ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /*even spacing between then */
+    border-radius: 10px;
+    border: 3px solid #333;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.h1{
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px; 
+    color: rgb(111, 24, 24);
+    margin: 20px auto; /* needs 20px so doesn't crash into section below, auto so its stays centered  */
+    text-align: center;
+    text-decoration: underline;
+    padding: 5px 5px; /* how much space is in the boarder */
+}
+.h2{
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px; 
+    color: rgb(111, 24, 24);
+    margin: 20px auto; /* needs 20px so doesn't crash into section below, auto so its stays centered  */
+    text-align: center;
+    border: 3px solid rgb(111, 24, 24); /*border*/
+    padding: 5px 5px; /* how much space is in the boarder */
+    border-radius: 15px; /* rounded corners */
+    width: fit-content;
+}

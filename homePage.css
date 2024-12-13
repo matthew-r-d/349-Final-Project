@@ -1,0 +1,106 @@
+/* Good practice is to remove any margin or padding given by any web browser using the below code */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(215, 218, 224);
+}
+
+/* menu */
+.menu {
+    /* Use sticky instead of fixed */
+    position: sticky;
+    top:0;  /*this keeps the menu at very top of page */
+    border-bottom: 1px solid black;
+    background-color: rgb(215, 218, 224);
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.menu ul{
+    display: flex; /*makes horizontal*/
+    list-style-type: none; /*removes the bullet points that were popping up*/
+    justify-content: center;
+    width: 100%;    /* texts takes up 100% of menu width */
+    padding: 0; /* needed to center text with height: 50px */
+    margin: 0;  /* need for the above reason */
+}
+.menu li{
+    width:100%;
+    text-align: center;
+}
+.menu a{
+    color: black;
+    text-decoration: none;
+}
+
+/* title and one-liner */
+.title {
+    text-align: center;
+    font-size: 100px;
+    font-weight: bold;
+    color: rgb(93, 100, 135);
+    text-shadow:                /*easier to read if you add text-shadow like this */
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    
+}
+.oneLiner{
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Courier New', monospace;
+}
+
+/* updated better code */
+.section {
+    /* If you do not define height, it will automatically take the required height */
+    width: 100%;
+    padding: 50px 10px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(209, 218, 232);
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+ }
+ 
+ .box1{
+    background-color: rgb(209, 218, 232);
+ }
+ 
+ .flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /*!!!! important: needed to align text and image equally */
+    width: 100%;
+    height: 100%;
+ }
+
+ 
+ .text1 {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.2em;
+    color: rgb(111, 24, 24);
+    margin: 0 30px;
+ }
+ 
+ /* titles */
+ .text1::before {
+    display: block;
+    font-size: 1em;
+    text-decoration: underline;
+    margin-bottom: 5px;
+ }
+ .box1 .text1::before { content: "HELLO"; }
+ 
+ /* images */
+ .image1 {
+    width: auto;
+    height: auto;
+    max-width: 500px; /*helps it stay size when screen size is changed */
+    object-fit: cover;
+    margin-left: 10px;
+    margin-right: 10px;
+ }
